@@ -1,13 +1,96 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="css/style.css" />
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dynagenèse</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Georgia", serif;
+      background: #f4f4f4;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(to right, #1d1d1d, #3a3a3a);
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      margin-top: 1rem;
+    }
+
+    nav a {
+      color: #dcdcdc;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffda7a;
+    }
+
+    main {
+      flex: 1;
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    footer {
+      background: #1d1d1d;
+      color: #aaa;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .poetic {
+      font-style: italic;
+      color: #555;
+      margin-top: 2rem;
+    }
+  </style>
 </head>
 <body>
-  <h1>Bienvenue sur le site de la Dynagenèse</h1>
-  <p>Ceci est une première version de la page d’accueil.</p>
+  <header>
+    <h1>Dynagenèse</h1>
+    <nav>
+      <a href="#">Accueil</a>
+      <a href="#">Philosophie</a>
+      <a href="#">Annexes</a>
+      <a href="#">Bibliothèque</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Bienvenue dans l’univers de la Dynagenèse</h2>
+    <p>
+      Ce site explore les formes dynamiques de la création, où des entités interagissent selon des règles évolutives pour faire émerger du sens, de la beauté et de la pensée.
+    </p>
+    <p class="poetic">
+      Une graine posée dans le langage, <br>
+      une boucle qui s’invente à chaque cycle, <br>
+      et la pensée danse.
+    </p>
+  </main>
+
+  <footer>
+    &copy; 2025 Dynagenèse — Une expérience en mouvement
+  </footer>
 </body>
 </html>
