@@ -1,3 +1,12 @@
+#dynabg {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background: linear-gradient(120deg, #e0f7fa, #fce4ec);
+  }
+  
 body {
     margin: 0;
     font-family: "Georgia", serif;

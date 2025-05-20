@@ -2,12 +2,38 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Philosophie Dynagénique</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dynagenèse – Philosophie</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background-color: #f9f9f9; }
+    header { background-color: #222; color: white; padding: 1rem; text-align: center; }
+    header h1 { margin: 0; }
+    main { padding: 2rem; }
+    #sideMenu {
+      position: fixed; top: 50%; right: -140px; transform: translateY(-50%);
+      width: 160px; background-color: rgba(0, 0, 0, 0.85); color: white;
+      border-radius: 10px 0 0 10px; transition: right 0.3s ease; z-index: 999;
+    }
+    #sideMenu:hover { right: 0; }
+    #sideMenu ul { list-style: none; margin: 0; padding: 10px; }
+    #sideMenu li { margin: 12px 0; }
+    #sideMenu a { color: white; text-decoration: none; font-weight: bold; }
+    #sideMenu a:hover { text-decoration: underline; }
+  </style>
 </head>
+<body>
 
-<div id="sideMenu">
+  <header>
+    <h1>Dynagenèse</h1>
+    <p>Approche philosophique du processus génératif</p>
+  </header>
+
+  <main>
+    <h2>Philosophie de la Dynagenèse</h2>
+    <p>Ce chapitre développe les fondements de la pensée dynagénique : émergence, transformation, relationnalité dynamique, logique instable…</p>
+  </main>
+
+  <div id="sideMenu">
     <ul>
       <li><a href="index.html">Accueil</a></li>
       <li><a href="philosophie.html">Philosophie</a></li>
@@ -16,33 +42,6 @@
       <li><a href="glossaire.html">Glossaire</a></li>
     </ul>
   </div>
-  
-<body>
-  <header id="header">
-    <canvas id="dynagenCanvas"></canvas>
-    <h1>Dynagenèse</h1>
-    <nav>
-      <a href="index.html">Accueil</a>
-      <a href="philosophie.html">Philosophie</a>
-      <a href="#">Annexes</a>
-      <a href="#">Bibliothèque</a>
-    </nav>
-  </header>
 
-  <main>
-    <h2>Philosophie Dynagénique</h2>
-    <p>
-      La dynagenèse pense la création comme un mouvement de différenciation continue entre formes, fonctions et significations.
-    </p>
-    <p>
-      Ce site est une tentative de rendre visibles ces processus, en explorant leur logique, leur éthique et leur poésie.
-    </p>
-  </main>
-
-  <footer>
-    &copy; 2025 Dynagenèse — Une pensée en mouvement
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>

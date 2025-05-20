@@ -1,37 +1,47 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Annexes Dynagéniques</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dynagenèse – Annexes</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background-color: #f9f9f9; }
+    header { background-color: #222; color: white; padding: 1rem; text-align: center; }
+    header h1 { margin: 0; }
+    main { padding: 2rem; }
+    #sideMenu {
+      position: fixed; top: 50%; right: -140px; transform: translateY(-50%);
+      width: 160px; background-color: rgba(0, 0, 0, 0.85); color: white;
+      border-radius: 10px 0 0 10px; transition: right 0.3s ease; z-index: 999;
+    }
+    #sideMenu:hover { right: 0; }
+    #sideMenu ul { list-style: none; margin: 0; padding: 10px; }
+    #sideMenu li { margin: 12px 0; }
+    #sideMenu a { color: white; text-decoration: none; font-weight: bold; }
+    #sideMenu a:hover { text-decoration: underline; }
+  </style>
 </head>
-
-<div id="sideMenu">
-  <ul>
-    <li><a href="index.html">Accueil</a></li>
-    <li><a href="philosophie.html">Philosophie</a></li>
-    <li><a href="annexes.html">Annexes</a></li>
-    <li><a href="bibliotheque.html">Bibliothèque</a></li>
-    <li><a href="glossaire.html">Glossaire</a></li>
-  </ul>
-</div>
-
 <body>
-  <header id="header">
-    <canvas id="dynagenCanvas"></canvas>
+
+  <header>
     <h1>Dynagenèse</h1>
-    <nav>
-      <a href="index.html">Accueil</a>
-      <a href="philosophie.html">Philosophie</a>
-      <a href="annexes.html">Annexes Dynagéniques</a>
-      <a href="bibliotheque.html">Bibliothèque Dynagénique</a>
-      <a href="glossaire.html">Glossaire Affectif</a>
-    </nav>
+    <p>Annexes théoriques dynagéniques</p>
   </header>
 
   <main>
     <h2>Annexes Dynagéniques</h2>
-    <p>Contenu des annexes à venir.</p>
+    <p>Cette section regroupe les modules supplémentaires : simulations, modèles, comparaisons scientifiques et extensions du projet.</p>
   </main>
+
+  <div id="sideMenu">
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="philosophie.html">Philosophie</a></li>
+      <li><a href="annexes.html">Annexes</a></li>
+      <li><a href="bibliotheque.html">Bibliothèque</a></li>
+      <li><a href="glossaire.html">Glossaire</a></li>
+    </ul>
+  </div>
+
 </body>
 </html>
