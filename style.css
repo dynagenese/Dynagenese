@@ -1,0 +1,39 @@
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+#dynabg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: linear-gradient(120deg, #e0f7fa, #fce4ec);
+}
+
+header {
+  position: relative;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 1;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #00796B;
+  font-weight: bold;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.9);
+}

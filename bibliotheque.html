@@ -2,104 +2,25 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dynagenèse – Bibliothèque</title>
-  <style>
-    body { margin: 0; font-family: Arial, sans-serif; background-color: #f9f9f9; }
-    header { background-color: #222; color: white; padding: 1rem; text-align: center; }
-    header h1 { margin: 0; }
-    main { padding: 2rem; }
-    #sideMenu {
-      position: fixed; top: 50%; right: -140px; transform: translateY(-50%);
-      width: 160px; background-color: rgba(0, 0, 0, 0.85); color: white;
-      border-radius: 10px 0 0 10px; transition: right 0.3s ease; z-index: 999;
-    }
-    #sideMenu:hover { right: 0; }
-    #sideMenu ul { list-style: none; margin: 0; padding: 10px; }
-    #sideMenu li { margin: 12px 0; }
-    #sideMenu a { color: white; text-decoration: none; font-weight: bold; }
-    #sideMenu a:hover { text-decoration: underline; }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bibliotheque</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
-<script>
-  const canvas = document.getElementById('dynabg');
-  const ctx = canvas.getContext('2d');
-  
-  let width, height;
-  function resize() {
-    width = canvas.width = window.innerWidth;
-    height = canvas.height = window.innerHeight;
-  }
-  resize();
-  window.addEventListener('resize', resize);
-  
-  const entities = Array.from({length: 40}, () => ({
-    x: Math.random() * width,
-    y: Math.random() * height,
-    vx: (Math.random() - 0.5) * 0.5,
-    vy: (Math.random() - 0.5) * 0.5,
-    r: 2 + Math.random() * 3
-  }));
-  
-  function draw() {
-    ctx.clearRect(0, 0, width, height);
-    
-    // Lignes dynamiques
-    for (let i = 0; i < entities.length; i++) {
-      for (let j = i + 1; j < entities.length; j++) {
-        const dx = entities[i].x - entities[j].x;
-        const dy = entities[i].y - entities[j].y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < 100) {
-          ctx.strokeStyle = `rgba(0,0,0,${1 - dist / 100})`;
-          ctx.beginPath();
-          ctx.moveTo(entities[i].x, entities[i].y);
-          ctx.lineTo(entities[j].x, entities[j].y);
-          ctx.stroke();
-        }
-      }
-    }
-  
-    // Cercles mouvants
-    for (let e of entities) {
-      e.x += e.vx;
-      e.y += e.vy;
-      if (e.x < 0 || e.x > width) e.vx *= -1;
-      if (e.y < 0 || e.y > height) e.vy *= -1;
-  
-      ctx.beginPath();
-      ctx.arc(e.x, e.y, e.r, 0, 2 * Math.PI);
-      ctx.fillStyle = 'rgba(0, 150, 136, 0.5)';
-      ctx.fill();
-    }
-  
-    requestAnimationFrame(draw);
-  }
-  draw();
-  </script>
-  
 <body>
-
-  <header>
-    <h1>Dynagenèse</h1>
-    <p>Bibliothèque dynagénique commentée</p>
-  </header>
-
-  <main>
-    <h2>Bibliothèque</h2>
-    <p>Cette bibliothèque rassemble des œuvres littéraires, philosophiques et scientifiques en résonance avec la dynamique du projet Dynagenèse.</p>
-  </main>
-
-  <div id="sideMenu">
-    <ul>
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="philosophie.html">Philosophie</a></li>
-      <li><a href="annexes.html">Annexes</a></li>
-      <li><a href="bibliotheque.html">Bibliothèque</a></li>
-      <li><a href="glossaire.html">Glossaire</a></li>
-    </ul>
-  </div>
-
+<canvas id="dynabg"></canvas>
+<header>
+  <h1>Dynagenèse</h1>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="philosophie.html">Philosophie</a>
+    <a href="annexes.html">Annexes Dynagéniques</a>
+    <a href="bibliotheque.html">Bibliothèque Dynagénique</a>
+    <a href="glossaire.html">Glossaire Affectif</a>
+  </nav>
+</header>
+<main>
+<h2>Bibliothèque Dynagénique</h2><p>Textes, œuvres et références inspirantes pour la Dynagenèse.</p>
+</main>
+<script src="dynabg.js"></script>
 </body>
 </html>
