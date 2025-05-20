@@ -86,4 +86,43 @@ body {
     text-align: center;
     padding: 1rem;
   }
+
+  /* Menu latéral à droite */
+#sideMenu {
+    position: fixed;
+    top: 50%;
+    right: -140px; /* hors de l'écran à droite */
+    transform: translateY(-50%);
+    width: 160px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 10px 0 0 10px;
+    transition: right 0.3s ease;
+    z-index: 999;
+  }
+  
+  #sideMenu:hover {
+    right: 0; /* glisse dans l'écran */
+  }
+  
+  #sideMenu ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+  }
+  
+  #sideMenu li {
+    margin: 10px 0;
+  }
+  
+  #sideMenu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  #sideMenu a:hover {
+    text-decoration: underline;
+  }
+  
   
